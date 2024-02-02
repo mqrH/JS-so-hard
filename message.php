@@ -11,6 +11,29 @@ if (!empty($_GET['delete_message'])) {
 
 $pdo = null;
 ?>
+
+
+<?php
+var_dump($_POST);
+?>
+
+<?php if (
+    !empty($_POST['email'])
+) : ?>
+    <div class="alert alert-success" role="alert">
+        Ви вказали імейл <?= $_POST['email']; ?>
+    </div>
+<?php endif; ?>
+
+
+<?php if (
+    !empty($_POST['password'])
+) : ?>
+    <div class="alert alert-success" role="alert">
+        Ви вказали пароль <?= $_POST['password']; ?>
+    </div>
+<?php endif; ?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
